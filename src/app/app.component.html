@@ -1,0 +1,189 @@
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<h1 align="center">Data Mhs</h1>
+
+<!--navbar mulai-->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">LOGO</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">HOME <span class="sr-only">(current)</span></a></li>
+        <li><a href="#" (click)="smModal.show()" popover="Tambah Data Mhs" placement="bottom" triggers="mouseenter:mouseleave">ADD</a></li>
+        <li><a href="#" (click)="smModal2.show()" popover="Ubah Data Mhs" placement="bottom" triggers="mouseenter:mouseleave">EDIT</a></li>
+      </ul>
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<!--end of navbar-->
+
+<!--Modal Add-->
+<div class="container">
+    <div bsModal #smModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="myModal">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title pull-left">Tambah mhs</h4>
+              <button type="button" class="close pull-right" aria-label="Close" (click)="smModal.hide()">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <label>ID</label>
+                <input type="text" class="form-control" placeholder="id">
+
+                <label>Nama</label>
+                <input type="text" class="form-control" placeholder="nama">
+
+                <label>Angkatan</label>
+                <input type="text" class="form-control" placeholder="angkatan">
+
+                <label>Jurusan</label>
+                <input type="text" class="form-control" placeholder="jurusan">
+
+                <label>Alamat</label>
+                <input type="text" class="form-control" placeholder="alamat">
+
+                <label>Email</label>
+                <input type="text" class="form-control" placeholder="email">
+
+                <label>Telp</label>
+                <input type="text" class="form-control" placeholder="telp"><br>
+                
+                <button type="submit" class="btn btn-primary">Simpan</button>
+                <button type="submit" class="btn btn-danger">Batal</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+<!--enf of modal-->
+
+<!--Modal Edit-->
+<div class="container">
+    <div bsModal #smModal2="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="myModal">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title pull-left">Ubah data mhs</h4>
+              <button type="button" class="close pull-right" aria-label="Close" (click)="smModal.hide()">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <label>ID</label>
+                <input type="text" class="form-control" placeholder="id">
+
+                <label>Nama</label>
+                <input type="text" class="form-control" placeholder="nama">
+
+                <label>Angkatan</label>
+                <input type="text" class="form-control" placeholder="angkatan">
+
+                <label>Jurusan</label>
+                <input type="text" class="form-control" placeholder="jurusan">
+
+                <label>Alamat</label>
+                <input type="text" class="form-control" placeholder="alamat">
+
+                <label>Email</label>
+                <input type="text" class="form-control" placeholder="email">
+
+                <label>Telp</label>
+                <input type="text" class="form-control" placeholder="telp"><br>
+                
+                <button type="submit" class="btn btn-primary">Simpan</button>
+                <button type="submit" class="btn btn-danger">Batal</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+<!--enf of modal-->
+
+
+<!--table-->
+<div class="container">
+  <table class="table table-responsive table-striped">
+    <tr>
+      <th>id</th>
+      <th>nama</th>
+      <th>angkatan</th>
+      <th>jurusan</th>
+      <th>alamat</th>
+      <th>email</th>
+      <th>telp</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>alpha</td>
+      <td>2010</td>
+      <td>Psikologi</td>
+      <td>Barat</td>
+      <td>alpha@a.a</td>
+      <td>021</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>beta</td>
+        <td>2009</td>
+        <td>Politik</td>
+        <td>Timur</td>
+        <td>beta@b.b</td>
+        <td>022</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>charlie</td>
+          <td>2008</td>
+          <td>Hukum</td>
+          <td>Utara</td>
+          <td>charlie@c.c</td>
+          <td>029</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>delta</td>
+            <td>2011</td>
+            <td>Sosial</td>
+            <td>Selatan</td>
+            <td>delta@d.d</td>
+            <td>025</td>
+        </tr>
+  </table>
+<div>
+<!--end of table-->
+
+<script>
+$("#myModal").draggable({
+  handle: ".modal-header"
+}); 
+</script>

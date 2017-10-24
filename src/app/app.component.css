@@ -1,0 +1,28 @@
+.tengah
+{
+    color: rgb(0, 52, 149);
+    text-align: center;
+}
+
+.modal-body
+{
+    background-color: rgb(255, 255, 255);
+ 
+}
+
+.modal-sm, .modal-lg, .modal-md
+{
+        top: 50%;
+        left: 50%;
+        width:30em;
+        height:18em;
+        /* margin-top: -9em; set to a negative number 1/2 of your height*/
+        /*margin-left: -15em; set to a negative number 1/2 of your width*/
+        /*background-color: #001b00;*/
+}
+
+#popover
+{
+    width:200px;
+    height:250px;    
+}
