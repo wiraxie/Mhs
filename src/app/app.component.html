@@ -57,27 +57,27 @@
             <div class="modal-body">
               <form>
                 <label>ID</label>
-                <input type="text" class="form-control" placeholder="id">
+                <input type="text" name="id" class="form-control" placeholder="id" [(ngModel)]="id">
 
                 <label>Nama</label>
-                <input type="text" class="form-control" placeholder="nama">
+                <input type="text" name="nama" class="form-control" placeholder="nama" [(ngModel)]="nama">
 
                 <label>Angkatan</label>
-                <input type="text" class="form-control" placeholder="angkatan">
+                <input type="text" name="angkatan" class="form-control" placeholder="angkatan" [(ngModel)]="angkatan">
 
                 <label>Jurusan</label>
-                <input type="text" class="form-control" placeholder="jurusan">
+                <input type="text" name="jurusan" class="form-control" placeholder="jurusan" [(ngModel)]="jurusan">
 
                 <label>Alamat</label>
-                <input type="text" class="form-control" placeholder="alamat">
+                <input type="text" name="alamat" class="form-control" placeholder="alamat" [(ngModel)]="alamat">
 
                 <label>Email</label>
-                <input type="text" class="form-control" placeholder="email">
+                <input type="text" name="email" class="form-control" placeholder="email" [(ngModel)]="email">
 
                 <label>Telp</label>
-                <input type="text" class="form-control" placeholder="telp"><br>
+                <input type="text" name="telp" class="form-control" placeholder="telp" [(ngModel)]="telp"><br>
                 
-                <button type="submit" class="btn btn-primary">Simpan</button>
+                <button type="submit" class="btn btn-primary" (click)="addData()">Simpan</button>
                 <button type="submit" class="btn btn-danger">Batal</button>
               </form>
             </div>
@@ -100,25 +100,25 @@
             <div class="modal-body">
               <form>
                 <label>ID</label>
-                <input type="text" class="form-control" placeholder="id">
+                <input type="text" class="form-control" placeholder="id" id="id"/>
 
                 <label>Nama</label>
-                <input type="text" class="form-control" placeholder="nama">
+                <input type="text" class="form-control" placeholder="nama" id="nama"/>
 
                 <label>Angkatan</label>
-                <input type="text" class="form-control" placeholder="angkatan">
+                <input type="text" class="form-control" placeholder="angkatan" id="angkatan"/>
 
                 <label>Jurusan</label>
-                <input type="text" class="form-control" placeholder="jurusan">
+                <input type="text" class="form-control" placeholder="jurusan" id="jurusan"/>
 
                 <label>Alamat</label>
-                <input type="text" class="form-control" placeholder="alamat">
+                <input type="text" class="form-control" placeholder="alamat" id="alamat"/>
 
                 <label>Email</label>
-                <input type="text" class="form-control" placeholder="email">
+                <input type="text" class="form-control" placeholder="email" id="email"/>
 
                 <label>Telp</label>
-                <input type="text" class="form-control" placeholder="telp"><br>
+                <input type="text" class="form-control" placeholder="telp" id="telp"/><br>
                 
                 <button type="submit" class="btn btn-primary">Simpan</button>
                 <button type="submit" class="btn btn-danger">Batal</button>
@@ -142,7 +142,7 @@
       <th>email</th>
       <th>telp</th>
     </tr>
-    <tr>
+    <!-- <tr>
       <td>1</td>
       <td>alpha</td>
       <td>2010</td>
@@ -177,6 +177,15 @@
             <td>Selatan</td>
             <td>delta@d.d</td>
             <td>025</td>
+        </tr> -->
+        <tr *ngFor="let mhs of mhs">
+          <td>{{mhs.id}}</td>
+          <td>{{mhs.nama}}</td>
+          <td>{{mhs.angkatan}}</td>
+          <td>{{mhs.jurusan}}</td>
+          <td>{{mhs.alamat}}</td>
+          <td>{{mhs.email}}</td>
+          <td>{{mhs.telp}}</td>
         </tr>
   </table>
 <div>

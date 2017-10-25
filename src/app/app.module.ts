@@ -6,6 +6,7 @@ import { FormsModule }   from '@angular/forms';
 import { ModalModule } from 'ngx-bootstrap';
 import { TooltipModule } from 'ngx-bootstrap';
 import { PopoverModule } from 'ngx-bootstrap';
+import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 
 import { AppComponent } from './app.component';
 
@@ -27,3 +28,5 @@ import { AppComponent } from './app.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+platformBrowserDynamic().bootstrapModule(AppModule)
