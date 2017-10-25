@@ -21,7 +21,7 @@ export class AppComponent
     // this.modalRef = this.modalService.show(template);
     // }
     
-   public id: number;
+  public id: number;
   public nama: string;
   public angkatan: number;
   public jurusan: string;

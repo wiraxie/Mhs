@@ -129,7 +129,6 @@
       </div>
 <!--enf of modal-->
 
-
 <!--table-->
 <div class="container">
   <table class="table table-responsive table-striped">
@@ -179,7 +178,7 @@
             <td>025</td>
         </tr> -->
         <tr *ngFor="let mhs of mhs">
-          <td>{{mhs.id}}</td>
+          <td><button type="button" class="btn btn-link btn-sm" popover="klik utk ubah" triggers="mouseenter:mouseleave">{{mhs.id}}</button></td>
           <td>{{mhs.nama}}</td>
           <td>{{mhs.angkatan}}</td>
           <td>{{mhs.jurusan}}</td>
