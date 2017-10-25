@@ -7,6 +7,7 @@ import { ModalModule } from 'ngx-bootstrap';
 import { TooltipModule } from 'ngx-bootstrap';
 import { PopoverModule } from 'ngx-bootstrap';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import { NgIf } from '@angular/common';
 
 import { AppComponent } from './app.component';
 
