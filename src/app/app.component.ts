@@ -30,7 +30,15 @@ export class AppComponent
   public telp: number;
   public mhs: Array<{id: number, nama: string, angkatan: number, jurusan: string, alamat: string, email: string, telp: number}> = [];
 
-  addData() {
+  selectedMhs;
+
+  addData() 
+  {
     this.mhs.push( {id: this.id, nama: this.nama, angkatan: this.angkatan, jurusan: this.jurusan, alamat:this.alamat, email: this.email, telp: this.telp } );
+  }
+
+  editData(id): void
+  {
+    
   }
 }

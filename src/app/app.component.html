@@ -78,7 +78,7 @@
                 <input type="text" name="telp" class="form-control" placeholder="telp" [(ngModel)]="telp"><br>
                 
                 <button type="submit" class="btn btn-primary" (click)="addData()">Simpan</button>
-                <button type="submit" class="btn btn-danger">Batal</button>
+                <button type="submit" class="btn btn-danger" (click)="smModal.hide()">Batal</button>
               </form>
             </div>
           </div>
@@ -93,7 +93,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h4 class="modal-title pull-left">Ubah data mhs</h4>
-              <button type="button" class="close pull-right" aria-label="Close" (click)="smModal.hide()">
+              <button type="button" class="close pull-right" aria-label="Close" (click)="smModal2.hide()">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
@@ -121,7 +121,7 @@
                 <input type="text" class="form-control" placeholder="telp" id="telp"/><br>
                 
                 <button type="submit" class="btn btn-primary">Simpan</button>
-                <button type="submit" class="btn btn-danger">Batal</button>
+                <button type="submit" class="btn btn-danger" (click)="smModal2.hide()">Batal</button>
               </form>
             </div>
           </div>
